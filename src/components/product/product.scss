@@ -1,0 +1,47 @@
+@import "../../style.scss";
+
+.product {
+    border-radius: 5px;
+    overflow: hidden;
+    box-sizing: border-box;
+
+    @include themify($themes) {
+        background-color: themed("bg");
+        color: themed("textColorSoft");
+
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+
+        .image {
+            display: block;
+            width: 210px;
+            height: 210px;
+            object-fit: cover;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .product-details {
+            display: flex;
+            flex-direction: column;
+            padding: 5px 10px;
+            font-size: 18px;
+
+
+            .price {
+                font-weight: bold;
+            }
+
+            .name {
+                font-size: 20px;
+            }
+
+            .place {
+                font-size: 12px;
+            }
+        }
+    }
+}

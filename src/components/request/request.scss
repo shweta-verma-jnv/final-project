@@ -1,0 +1,66 @@
+@import "../../style.scss";
+
+.request {
+    border-radius: 5px;
+    overflow: hidden;
+    box-sizing: border-box;
+
+    @include themify($themes) {
+        background-color: themed("bg");
+        color: themed("textColorSoft");
+
+        display: flex;
+        flex-direction: column;
+
+        .view {
+            display: flex;
+            flex-direction: column;
+
+            img {
+                max-width: 220px;
+                object-fit: cover;
+                margin-bottom: 5px;
+            }
+
+            span {
+                overflow: hidden;
+                padding-left: 10px;
+                font-size: 20px;
+                font-weight: bold;
+            }
+        }
+
+        .buttons {
+            background-color: inherit;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            width: 90%;
+            padding: 10px;
+
+            @media screen and (width>160px) {
+                flex-direction: column;
+
+                button {
+                    max-width: 100%;
+                }
+            }
+
+            button {
+                color: white;
+                border: none;
+                padding: 5px;
+                cursor: pointer;
+                flex-basis: 50%;
+
+                &:first-child {
+                    background-color: #5271ff;
+                }
+
+                &:last-child {
+                    background-color: #f0544f;
+                }
+            }
+        }
+    }
+}

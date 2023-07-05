@@ -1,0 +1,34 @@
+@import "../../style.scss";
+
+.friend-requests {
+    @include themify($themes) {
+        background-color: themed("bgSoft");
+        color: themed("textColorSoft");
+        padding: 10px 20px;
+
+        .request-type {
+            display: block;
+
+            .request-header {
+                display: flex;
+                justify-content: space-between;
+                padding: 10px;
+
+                span {
+                    color: #5271ff;
+                }
+            }
+
+            .requests {
+                display: flex;
+                flex-flow: row;
+                gap: 10px;
+                flex-wrap: wrap;
+                justify-content: start;
+                align-items: center;
+                margin-bottom: 20px;
+                padding-left: 10px;
+            }
+        }
+    }
+}
